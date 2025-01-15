@@ -95,15 +95,15 @@ export const SignUp = () => {
       //   else console.log('User signed up:', user);
       // };
   return (
-    <div className='w-[100%] bg-[#EEEEEE] h-screen flex flex-row gap-[20px] items-center justify-center'>
+    <div className='w-[100%] md:p-0 px-[10px] py-[20px] bg-[#EEEEEE] h-screen flex flex-row gap-[20px] items-center justify-center'>
 
-    <div className='w-[400px] h-[550px] flex justify-center bg-[#213555] flex-col items-center gap-[10px] rounded-[10px]'>
-      <h1 className='text-4xl font-bold text-[#EEEEEE]'>Sign Up Here !!! </h1>
+    <div className='md:w-[400px] md:h-[550px] w-auto h-auto md:p-0 p-[10px] flex justify-center bg-[#213555] flex-col items-center gap-[10px] rounded-[10px]'>
+      <h1 className='md:text-4xl text-3xl font-bold text-[#EEEEEE]'>Sign Up Here !!! </h1>
       <div className='flex flex-col w-full  h-[400px] p-4'>
 
       <form  className="flex flex-col gap-4 items-center" onSubmit={formik.handleSubmit}>
         
-        <div className="flex flex-col  text-lg  ">
+        <div className="flex flex-col  md:text-lg  text-md ">
         <label className="text-[#EEEEEE]" htmlFor="email">Email </label>
         <input
             id="email"
@@ -116,7 +116,7 @@ export const SignUp = () => {
         </div>
         {formik.errors.email ? <div>{formik.errors.email}</div> : null}
 
-        <div className="flex flex-col  text-lg  ">
+        <div className="flex flex-col md:text-lg  text-md ">
         <label  className="text-[#EEEEEE]" htmlFor="Name"> Name </label>
         <input
             id="name"
@@ -129,7 +129,7 @@ export const SignUp = () => {
         </div>
         {formik.errors.name ? <div>{formik.errors.name}</div> : null}
 
-        <div className="relative flex flex-col  text-lg  ">
+        <div className="relative flex flex-col md:text-lg  text-md">
         <label  className="text-[#EEEEEE]" htmlFor="password"> Password </label>
         <input
             id="password"
@@ -143,7 +143,7 @@ export const SignUp = () => {
         </div>
         {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
-        <div className="relative flex flex-col  pb-[20px] text-lg  ">
+        <div className="relative flex flex-col  pb-[20px]  md:text-lg  text-md ">
         <label  className="text-[#EEEEEE]" htmlFor="password">Confirm Password </label>
         <input
             id="confirmpassword"
@@ -157,7 +157,7 @@ export const SignUp = () => {
         </div>
         {formik.errors.confirmpassword ? <div>{formik.errors.confirmpassword}</div> : null}
 
-        <button  className="font-medium text-lg items-center bg-black hover:bg-[#3E5879] text-[#e5e3df] text-white px-8  py-1 rounded-lg" type="submit">Sign Up</button>
+        <button  className="font-medium  md:text-lg  text-md items-center bg-black hover:bg-[#3E5879] text-[#e5e3df] text-white px-8  py-1 rounded-lg" type="submit">Sign Up</button>
         <Toaster />
         <a href="/" className='text-[#EEEEEE]'>Login?</a>
         </form>

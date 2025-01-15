@@ -24,16 +24,16 @@ export const UserDetails = () => {
     
     
   return (
-    <div className='w-[calc(100%-290px)] absolute left-[250px] h-[600px]  rounded-[10px] flex items-center justify-center'>
-        <div className='w-[500px] h-[500px] p-[10px] bg-[#EEEEEE] flex items-center justify-center flex-col gap-[50px] gap-[30px] rounded-[10px]'>
+    <div className='md:w-[calc(100%-290px)] w-auto absolute md:left-[250px] left-[190px] md:h-[600px] h-auto rounded-[10px] flex items-center justify-center'>
+        <div className='md:w-[500px] md:h-[500px] w-auto h-auto p-[10px] bg-[#EEEEEE] flex items-center justify-center flex-col gap-[50px] gap-[30px] rounded-[10px]'>
             <CgProfile className='w-[100px] h-[100px] text-[#213555]'/>
             <div className='w-full h-auto flex items-center justify-center flex-row gap-[10px]'>
-                <div className='w-1/3 h-auto flex flex-col gap-[5px]'>
+                <div className='md:w-1/3 w-auto h-auto flex flex-col gap-[5px]'>
                     <h1 className='w-auto text-xl leding-[19px] text-[#213555] border-[#213555] border-b-[3px] border-r-[3px] '>Username  </h1>
                     <h1 className='w-auto text-xl leding-[19px] text-[#213555] border-[#213555] border-b-[3px] border-r-[3px] '>Email </h1>
                     {/* <h1 className='w-auto text-xl leding-[19px] text-[#213555] border-[#213555] border-b-[3px] border-r-[3px] '>Progress</h1>  */}
                 </div>
-                <div className='w-2/3 h-auto flex flex-col gap-[5px]'>
+                <div className='md:w-2/3 w-auto h-auto flex flex-col gap-[5px]'>
                     <h1 className='w-auto text-xl leding-[19px] text-[#213555] border-[#213555] border-b-[3px] drop-shadow-lg'> {user[0].name}  </h1>
                     <h1 className='w-auto text-xl leding-[19px] text-[#213555] border-[#213555] border-b-[3px]'>{user[0].email} </h1>
                     {/* <h1 className='w-auto text-xl leding-[19px] text-[#213555] border-[#213555] border-b-[3px]'>50%</h1>  */}

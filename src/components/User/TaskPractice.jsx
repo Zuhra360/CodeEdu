@@ -96,7 +96,7 @@ export const TaskPractice = ({questions}) => {
        {question ? (
          <div className='md:w-1/2 sm:w-full p-[10px] h-full text-md font-medium  bg-[#eae8ea] flex flex-col justify-between rounded-[5px]'>
             <h1>{question.Question}</h1> 
-            <button className="w-[120px] h-[30px] py-[5px] px-[10px] bg-[#3E5879] hover:bg-[#a16207] text-white font-semibold text-lg rounded-[10px] flex items-center justify-center" onClick={handleSubmit} >Submit</button>
+            <button className="w-[120px] h-[30px] py-[5px] px-[10px] bg-[#3E5879] hover:bg-[#31304D]  text-white font-semibold text-lg rounded-[10px] flex items-center justify-center" onClick={handleSubmit} >Submit</button>
          </div>
        ) : (
         <p>Loading...</p>
@@ -112,9 +112,10 @@ export const TaskPractice = ({questions}) => {
             onChange={(value) => dispatch(setCode(value))} // Dispatch setCode
             theme="vs-dark"
           />
-             <button onClick={handleRunCode} className='w-[80px] h-[30px] py-[5px] px-[10px] bg-green-600 hover:bg-green-400 text-white font-semibold text-lg rounded-[10px] flex items-center justify-center'>Run</button>
-         
+           
         </div>
+        <button onClick={handleRunCode} className='w-[80px] h-[30px] py-[5px] px-[10px] bg-green-600 hover:bg-green-400 text-white font-semibold text-lg rounded-[10px] flex items-center justify-center'>Run</button>
+         
         <div className="w-full h-1/2 bg-black max-h-[800px] overflow-auto p-[10px]">   
             <pre className="text-white">{output}</pre>
         </div>

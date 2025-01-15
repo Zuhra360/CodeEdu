@@ -38,13 +38,13 @@ export const UserProfile = () => {
   return (
     <div className='w-11/12 p-[10px] h-full rounded-[10px] flex items-center justify-center '>
        
-       <div className='w-[500px] h-[500px]  bg-[#EEEEEE] flex items-center justify-center flex-col gap-[30px] rounded-[10px]'>
+       <div className='md:w-[500px] md:h-[500px] w-auto h-auto md:p-0 p-[20px] bg-[#EEEEEE] flex items-center justify-center flex-col gap-[30px] rounded-[10px]'>
        <CgProfile className='w-[100px] h-[100px] text-[#213555]'/>
             <div className='w-full h-auto flex items-center justify-center flex-row gap-[10px]'>
                
-                <div className='w-1/2 h-auto flex flex-col  gap-[5px]'>
-                    <h1 className='w-auto text-4xl leding-[19px]  text-[#3E5879] uppercase'> <label>{user.name} </label></h1>
-                    <h1 className='w-auto text-xl leding-[19px]  text-[#3E5879] '><label> {user.email} </label></h1>
+                <div className='md:w-1/2 w-auto h-auto flex flex-col  gap-[5px]'>
+                    <h1 className='w-auto md:text-4xl md:leading-[19px] text-2xl leading-[14px]  text-[#3E5879] uppercase'> <label>{user.name} </label></h1>
+                    <h1 className='w-auto  md:text-xl md:leading-[19px]  text-xl leading-[14px] text-[#3E5879] '><label> {user.email} </label></h1>
                     {/* <h1 className='w-auto text-xl leding-[19px] text-[#3E5879]  '>Progress :<label>50%</label></h1>     */}
                 </div>
             </div>

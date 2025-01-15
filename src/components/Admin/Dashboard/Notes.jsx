@@ -35,10 +35,10 @@ export const Notes = () => {
       }
     };
   return (
-    <div className='md:w-[calc(100%-290px)] w-[calc(100%-190px)] p-[10px] absolute md:left-[250px] left-[190px] h-[600px] bg-[#EEEEEE] rounded-[10px] flex flex-col gap-[10px]'>
+    <div className='md:w-[calc(100%-290px)] w-[calc(100%-190px)] p-[10px] absolute md:left-[250px] left-[190px] md:h-[600px] h-[500px] bg-[#EEEEEE] rounded-[10px] flex flex-col gap-[10px]'>
           
-          <div className="w-[calc(100%-10px)] h-auto  p-[10px] flex justify-between flex-row items-center bg-white rounded-[10px]">
-            <input className='text-md leading-[16px] w-[1100px]'
+          <div className="w-[calc(100%-10px)] h-auto  p-[10px] flex justify-between md:flex-row flex-col md:gap-[2px] gap-[10px] items-center bg-white rounded-[10px]">
+            <input className='text-md leading-[16px] w-11/12'
              type='text'
              placeholder='Notes in detail'
              value={note}

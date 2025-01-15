@@ -37,14 +37,14 @@ export const AdminProfile = () => {
   const user = userDetails[0]; // Access the first (and only) user object
  
   return (
-    <div className='md:w-[calc(100%-290px)] w-[calc(100%-190px)] absolute md:left-[250px] left-[190px] h-[600px]  rounded-[10px] flex items-center justify-center'>
-    <div className='md:w-[500px] h-[500px] w-auto bg-[#EEEEEE] flex items-center justify-center flex-col gap-[30px] rounded-[10px]'>
+    <div className='md:w-[calc(100%-290px)] w-auto absolute md:left-[250px] left-[160px] md:h-[600px] h-auto rounded-[10px] flex items-center justify-center'>
+    <div className='md:w-[500px] md:h-[500px] w-auto h-auto py-[10px] bg-[#EEEEEE] flex items-center justify-center flex-col gap-[30px] rounded-[10px]'>
        <CgProfile className='w-[100px] h-[100px] text-[#213555]'/>
             <div className='w-full h-auto flex items-center justify-center flex-row gap-[10px]'>
                
-                <div className='md:w-1/2 w-auto h-auto  flex flex-col  gap-[10px]'>
+                <div className='md:w-1/2 w-auto h-auto  flex flex-col md:items-start items-center gap-[10px]'>
                     <h1 className='w-auto md:text-4xl md:leading-[19px] text-2xl leading-[14px] text-[#3E5879] uppercase'> <label>{user.name} </label></h1>
-                    <h1 className='w-auto md:text-xl md:leading-[19px]  text-xl leading-[14px] text-[#3E5879] '><label> {user.email} </label></h1>
+                    <h1 className='w-auto md:text-xl md:leading-[19px]  text-md leading-[12px] text-[#3E5879] '><label> {user.email} </label></h1>
                     {/* <h1 className='w-auto text-xl leding-[19px] text-[#3E5879]  '>Progress :<label>50%</label></h1>     */}
                 </div>
             </div>
