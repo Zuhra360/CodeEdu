@@ -1,8 +1,8 @@
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { setCode, setOutput } from "../../Redux/Slice/EditorSlice";
 import { Editor } from '@monaco-editor/react';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import supabase from "../../config/supabaseClient";
 
 export const TaskPractice = ({questions}) => {
@@ -10,7 +10,11 @@ export const TaskPractice = ({questions}) => {
   const { code, output } = useSelector((state) => state.editor);
   const { id } = useParams(); // Extract id from the URL
   const [question, setQuestion] = useState(null);
- 
+
+  const navigate = useNavigate();
+  const handleGoback = () => {
+    navigate(-1);
+  }
   useEffect(() => {
     const fetchQuestion = async () => {
       const { data, error } = await supabase
@@ -94,9 +98,12 @@ export const TaskPractice = ({questions}) => {
   return (
     <div className='w-11/12 md:h-[650px] sm:h-auto p-[10px] h-[700px] bg-[#EEEEEE] rounded-[10px] flex md:flex-row flex-col gap-[20px]'>
        {question ? (
-         <div className='md:w-1/2 sm:w-full p-[10px] h-full text-md font-medium  bg-[#eae8ea] flex flex-col justify-between rounded-[5px]'>
+         <div className='md:w-1/2 sm:w-full p-[10px] h-full text-md font-medium  bg-white flex flex-col justify-between rounded-[5px]'>
             <h1>{question.Question}</h1> 
+            <div className="flex flex-row justify-between">
             <button className="w-[120px] h-[30px] py-[5px] px-[10px] bg-[#3E5879] hover:bg-[#31304D]  text-white font-semibold text-lg rounded-[10px] flex items-center justify-center" onClick={handleSubmit} >Submit</button>
+            <button onClick={handleGoback} className='w-[80px] h-[30px] py-[5px] px-[10px] bg-gray-800 text-white hover:bg-gray-600  text-lg font-medium rounded-[10px] flex items-center justify-center'>Back</button>
+            </div>
          </div>
        ) : (
         <p>Loading...</p>

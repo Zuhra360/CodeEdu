@@ -2,11 +2,15 @@ import { Editor } from '@monaco-editor/react';
 import { useDispatch, useSelector } from "react-redux";
 import { setCode, setOutput } from "../../Redux/Slice/EditorSlice"
 import { Chatbot } from '../../features/chatbot/Chatbot';
+import { useNavigate } from 'react-router-dom';
 
 export const LearnwithAi = () => {
   const dispatch = useDispatch();
   const { code, output } = useSelector((state) => state.editor);
-
+  const navigate = useNavigate();
+  const handleGoback = () => {
+    navigate(-1);
+  }
   const handleRunCode = () => {
     try {
       // Capture console.log output
@@ -38,8 +42,11 @@ export const LearnwithAi = () => {
             onChange={(value) => dispatch(setCode(value))} 
             theme="vs-dark"
           />
-        <button onClick={handleRunCode} className='w-[80px] h-[30px] py-[5px] px-[10px] bg-green-600 hover:bg-green-400 text-white text-lg font-semibold rounded-[10px] flex items-center justify-center'>Run</button>
-      
+          <div className='flex flex-row justify-between'>
+          <button onClick={handleRunCode} className='w-[80px] h-[30px] py-[5px] px-[10px] bg-green-600 hover:bg-green-400 text-white text-lg font-semibold rounded-[10px] flex items-center justify-center'>Run</button>
+          <button onClick={handleGoback} className='w-[80px] h-[30px] py-[5px] px-[10px] bg-gray-100 text-black hover:bg-gray-200  text-lg font-semibold rounded-[10px] flex items-center justify-center'>Back</button>
+          </div>
+       
       </div>
       <div className='md:w-1/3 sm:w-full p-[10px] h-full bg-black text-white rounded-[5px]'>
         <pre className="text-white">{output}</pre>

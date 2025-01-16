@@ -73,7 +73,7 @@ export const HomePage = () => {
       
       {fetchError && ( <p>{fetchError}</p>)}
       {questions && (
-        <div className="flex flex-col sm:w-full gap-[5px]">
+        <div className="flex flex-col sm:w-full gap-[10px]">
           <div className='w-auto h-[40px] py-[10px] px-[20px] flex flex-row gap-[10px]'>
             <button onClick={handlebuttonClick} className='w-auto py-[5px] px-[10px] h-[30px] bg-[#3E5879] hover:bg-[#31304D] flex items-center text-white gap-[10px] rounded-[7px]'>
               <label className="font-semibold text-lg">Learn with AI</label>

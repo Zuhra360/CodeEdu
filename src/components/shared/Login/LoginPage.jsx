@@ -106,7 +106,7 @@ export const LoginPage = () => {
       <div className=' md:block hidden w-[400px] h-[400px] flex justify-center items-center'>
          <img src={bgimage}/>
       </div>
-      <div className='md:w-[400px] md:h-[400px] w-auto h-auto shadow-lg  flex justify-center bg-[#213555] flex-col items-center rounded-[10px]'>
+      <div className='md:w-[400px] md:h-[400px] w-auto h-auto p-[10px] shadow-lg  flex justify-center bg-[#213555] flex-col items-center rounded-[10px]'>
         <h1 className='md:text-4xl text-3xl font-bold mt-12 p-2 text-[#EEEEEE]'>Login </h1>
         <div className='flex flex-col w-full  h-[300px] p-4'>
 
@@ -120,7 +120,7 @@ export const LoginPage = () => {
               type="email"
               onChange={formik.handleChange}
               value={formik.values.email}
-              className="border-2 border-black w-80 p-1 text-base rounded bg-[#eae8ea]"
+              className="border-2 border-black md:w-80 w-[240px] p-1 text-base rounded bg-[#eae8ea]"
           />
           </div>
           {formik.errors.email ? <div>{formik.errors.email}</div> : null}
@@ -133,7 +133,7 @@ export const LoginPage = () => {
               type={showPassword ? 'text' : 'password'}
               onChange={formik.handleChange}
               value={formik.values.password}
-              className="border-2 text-black border-black w-80 p-1 text-base rounded bg-[#eae8ea] "
+              className="border-2 text-black border-black md:w-80 w-[240px] p-1 text-base rounded bg-[#eae8ea] "
           />
             
           </div>

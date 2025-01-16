@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import { LandingPage } from "../../pages/common/LandingPage/LandingPage";
 import { Login } from "../../pages/common/Login/Login";
 import { SignUp } from "../../pages/user/SignUp";
 import { AdminDashboard } from "../../pages/admin/AdminDashboard";
@@ -13,9 +14,15 @@ import { ProfilePage } from "../../pages/user/ProfilePage";
 import { CurrentUsers } from "../../components/Admin/Dashboard/CurrentUsers";
 import { UserDetails } from "../../components/Admin/Dashboard/UserDetails";
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
+    element: <LandingPage/>,
+    
+  },
+  {
+    path: "Login",
     element: <Login/>,
     
   },

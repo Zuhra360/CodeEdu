@@ -101,7 +101,7 @@ export const SignUp = () => {
       <h1 className='md:text-4xl text-3xl font-bold text-[#EEEEEE]'>Sign Up Here !!! </h1>
       <div className='flex flex-col w-full  h-[400px] p-4'>
 
-      <form  className="flex flex-col gap-4 items-center" onSubmit={formik.handleSubmit}>
+      <form  className="flex flex-col gap-[10px] items-center" onSubmit={formik.handleSubmit}>
         
         <div className="flex flex-col  md:text-lg  text-md ">
         <label className="text-[#EEEEEE]" htmlFor="email">Email </label>
@@ -111,7 +111,7 @@ export const SignUp = () => {
             type="email"
             onChange={formik.handleChange}
             value={formik.values.email}
-            className="border-2 border-black w-80 p-1 text-base rounded bg-[#eae8ea]"
+            className="border-2 border-black md:w-80 w-[240px] p-1 text-base rounded bg-[#eae8ea]"
         />
         </div>
         {formik.errors.email ? <div>{formik.errors.email}</div> : null}
@@ -124,7 +124,7 @@ export const SignUp = () => {
             type="text"
             onChange={formik.handleChange}
             value={formik.values.name}
-            className="border-2 border-black w-80 p-1 text-base rounded bg-[#eae8ea] "
+            className="border-2 border-black md:w-80 w-[240px] p-1 text-base rounded bg-[#eae8ea] "
         />
         </div>
         {formik.errors.name ? <div>{formik.errors.name}</div> : null}
@@ -137,7 +137,7 @@ export const SignUp = () => {
             type={showPassword ? 'text' : 'password'}
             onChange={formik.handleChange}
             value={formik.values.password}
-            className="border-2 text-black border-black w-80 p-1 text-base rounded bg-[#eae8ea] "
+            className="border-2 text-black border-black md:w-80 w-[240px] p-1 text-base rounded bg-[#eae8ea] "
         />
         
         </div>
@@ -151,7 +151,7 @@ export const SignUp = () => {
             type={showPassword ? 'text' : 'password'}
             onChange={formik.handleChange}
             value={formik.values.confirmpassword}
-            className="border-2 text-black border-black w-80 p-1 text-base rounded bg-[#eae8ea] "
+            className="border-2 text-black border-black md:w-80 w-[240px] p-1 text-base rounded bg-[#eae8ea] "
         />
         
         </div>
@@ -159,7 +159,7 @@ export const SignUp = () => {
 
         <button  className="font-medium  md:text-lg  text-md items-center bg-black hover:bg-[#3E5879] text-[#e5e3df] text-white px-8  py-1 rounded-lg" type="submit">Sign Up</button>
         <Toaster />
-        <a href="/" className='text-[#EEEEEE]'>Login?</a>
+        <a href="/Login" className='text-[#EEEEEE]'>Login?</a>
         </form>
       </div>
     </div>
