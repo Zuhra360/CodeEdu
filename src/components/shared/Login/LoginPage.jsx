@@ -30,13 +30,9 @@ async function getUserRole(userId) {
   }
   
 export const LoginPage = () => {
+
   const navigate = useNavigate();
-  // const handleButtonClick = () => {
-  //   navigate('/UserHome');  
-  // };
-  // const handleButtonClick = () => {
-  //   navigate('/AdminDashboard');  
-  // };
+ 
   const [showPassword, setShowPassword] = useState(false);
   const formik = useFormik({
     initialValues: {

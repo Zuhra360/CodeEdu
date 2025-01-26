@@ -6,7 +6,6 @@ import { Footer } from "../../../components/shared/Footer/Footer";
 import  image1  from "../../../assets/images/Landingpage1.jpg";
 import  image2  from "../../../assets/images/Landingpage4.jpg";
 import  image3  from "../../../assets/images/Landingimg.jpg";
-import  bgImage  from "../../../assets/images/Landingbg.jpg";
 import  img1  from "../../../assets/images/Landingpage3.jpg";
 
 export const LandingPage = () => {
