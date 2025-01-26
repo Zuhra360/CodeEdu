@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { BsArrow90DegLeft } from "react-icons/bs";
 import supabase from "../../config/supabaseClient";
 import { MdArrowForwardIos , MdArrowBackIos} from "react-icons/md";
 import { TbArrowBackUp } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 
-export const Noteview = () => {
+export const NoteView = () => {
     
     const [notes, setNotes] = useState(null);
     const [loading, setLoading] = useState(true);
