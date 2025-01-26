@@ -1,7 +1,7 @@
 import { Box } from '@mantine/core';
-import bgimage from '../../../assets/images/bgimage.png'
+import bgimage from '../../../assets/images/background.png'
 import React, { useState } from 'react';
-import { toast } from 'react-hot-toast';
+import { toast, Toaster } from 'react-hot-toast';
 import supabase from '../../../config/supabaseClient';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
@@ -78,7 +78,7 @@ export const LoginPage = () => {
        
     } catch (error) {
         console.error('Login error:', error);
-        toast.error(`Login failed: ${error.message}`);
+        toast.error(`Login failed , Invalid credentials`);
     }
     },
   });
@@ -102,11 +102,11 @@ export const LoginPage = () => {
   return (
     <div className=' flex flex-col h-screen  w-full'>
       
-    <Box className='w-[100%] md:p-0 p-[10px] bg-[#F5EFE7] h-screen flex flex-row items-center justify-center gap-[30px]'>
+    <Box className='w-[100%] md:p-0 p-[10px] bg-[#E6E7E6] h-screen flex flex-row items-center justify-center gap-[30px]'>
       <div className=' md:block hidden w-[400px] h-[400px] flex justify-center items-center'>
          <img src={bgimage}/>
       </div>
-      <div className='md:w-[400px] md:h-[400px] w-auto h-auto p-[10px] shadow-lg  flex justify-center bg-[#213555] flex-col items-center rounded-[10px]'>
+      <div className='md:w-[400px] md:h-[400px] w-auto h-auto p-[10px] shadow-lg  flex justify-center bg-[#727D73] flex-col items-center rounded-[10px]'>
         <h1 className='md:text-4xl text-3xl font-bold mt-12 p-2 text-[#EEEEEE]'>Login </h1>
         <div className='flex flex-col w-full  h-[300px] p-4'>
 
@@ -139,8 +139,8 @@ export const LoginPage = () => {
           </div>
           {formik.errors.password ? <div>{formik.errors.password}</div> : null}
 
-          <button className="font-medium  md:text-lg  text-md  items-center bg-[#1D1616] hover:bg-[#3E5879]  text-[#EEEEEE] px-8 mt-8 py-1 rounded-lg" type="submit">Login</button>
-         
+          <button className="font-medium  md:text-lg  text-md  items-center bg-[#1D1616] hover:bg-[#AAB99A]  text-[#EEEEEE] px-8 mt-8 py-1 rounded-lg" type="submit">Login</button>
+          <Toaster />
           <p className='text-[#EEEEEE]'>Don't have an Account?<a href="/SignUp" className='text-[#D8C4B6]'>Sign Up</a></p>
           </form>
         </div>

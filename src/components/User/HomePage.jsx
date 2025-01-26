@@ -1,4 +1,5 @@
-import { FaFilter } from "react-icons/fa6";
+import { FaStickyNote } from "react-icons/fa";
+import { FaCheckCircle, FaHourglassHalf } from 'react-icons/fa';
 import { LuSquarePen } from "react-icons/lu";
 import { useNavigate } from 'react-router-dom';
 import supabase from "../../config/supabaseClient";
@@ -35,6 +36,7 @@ export const HomePage = () => {
           .select(`
             id,
             Question,
+            Title,
             UserQuestionsStatus (
               status
             )
@@ -63,6 +65,9 @@ export const HomePage = () => {
   const handlebuttonClick = () => {
      navigate('/CodewithAi');
   }
+  const handlebuttonNote = () => {
+    navigate('/ViewNotes');
+ }
   const handleNavigation = (id) => {
     navigate(`/PracticePage/${id}`);
  }
@@ -75,13 +80,13 @@ export const HomePage = () => {
       {questions && (
         <div className="flex flex-col sm:w-full gap-[10px]">
           <div className='w-auto h-[40px] py-[10px] px-[20px] flex flex-row gap-[10px]'>
-            <button onClick={handlebuttonClick} className='w-auto py-[5px] px-[10px] h-[30px] bg-[#3E5879] hover:bg-[#31304D] flex items-center text-white gap-[10px] rounded-[7px]'>
+            <button onClick={handlebuttonClick} className='w-auto py-[5px] px-[10px] h-[30px] bg-[#638C6D] hover:bg-[#AAB99A] flex items-center text-white gap-[10px] rounded-[7px]'>
               <label className="font-semibold text-lg">Learn with AI</label>
               <LuSquarePen />
             </button>
-            <button className='w-auto py-[5px] px-[10px] h-[30px] bg-[#3E5879] hover:bg-[#31304D] flex items-center text-white rounded-[7px] gap-[5px]'>
-              <label className="font-semibold text-lg">Filter</label>
-              <FaFilter />
+            <button onClick={handlebuttonNote} className='w-auto py-[5px] px-[10px] h-[30px] bg-[#638C6D] hover:bg-[#AAB99A] flex items-center text-white rounded-[7px] gap-[5px]'>
+              <label className="font-semibold text-lg">Notes</label>
+              <FaStickyNote />
             </button>
           </div>
       
@@ -89,9 +94,16 @@ export const HomePage = () => {
           <div className='w-full p-[10px] overflow-auto h-[550px]  rounded-[5px] flex flex-col gap-[5px]'>
           {questions.map((questions) => (
             <div key={questions.id} className='w-full p-[10px] h-auto bg-white flex items-center flex-row justify-between rounded-[10px]'>
-              <h1 onClick={() => handleNavigation(questions.id)} className='w-[90%]  text-black text-md font-medium h-auto cursor-pointer px-[10px] flex items-center'>{questions.Question}</h1>
+              <h1 onClick={() => handleNavigation(questions.id)} className='w-[90%]  text-black text-md font-medium h-auto cursor-pointer px-[10px] flex items-center'>{questions.Title}</h1>
               <div className="w-auto flex flex-row gap-[5px]">
-              <button className='w-auto py-[5px] px-[10px] h-[30px] bg-[#3E5879] hover:bg-[#31304D] flex items-center text-white text-bold text-md rounded-[7px]'> {questions.UserQuestionsStatus?.[0]?.status || "Pending"}</button>
+              {/* <button className='w-auto py-[5px] px-[10px] h-[30px] bg-[#638C6D] hover:bg-[#AAB99A] flex items-center text-white text-bold text-md rounded-[7px]'> {questions.UserQuestionsStatus?.[0]?.status || "Pending"}</button> */}
+              <button className="w-auto py-[5px] px-[10px] h-[30px]  flex items-center text-white text-bold text-md rounded-[7px]">
+                {questions.UserQuestionsStatus?.[0]?.status === "complete" ? (
+                  <FaCheckCircle className="text-green-500 text-2xl" />
+                ) : (
+                  <FaHourglassHalf className="text-yellow-500 text-2xl" />
+                )}
+              </button>
               </div>
             </div>
 

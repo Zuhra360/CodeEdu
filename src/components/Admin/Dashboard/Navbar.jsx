@@ -28,7 +28,7 @@ export const Navbar = () => {
     }
   };
   return (
-    <div className='w-full h-[100px] py-[20px] flex items-center bg-[#213555] justify-center '>
+    <div className='w-full h-[100px] py-[20px] flex items-center bg-[#727D73] justify-center '>
     <div className='w-11/12 h-[50px] py-[10px] px-[10px] bg-[#EEEEEE] flex items-center flex-row justify-between rounded-[10px]'>
       <div className="h-[20px] w-auto flex items-center flex-row gap-[5px] ">
         <h1 className="  text-bold text-3xl leading-[19px] text-[#1D1616]">CodeEdu</h1>

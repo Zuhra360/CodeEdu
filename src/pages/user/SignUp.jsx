@@ -97,7 +97,7 @@ export const SignUp = () => {
   return (
     <div className='w-[100%] md:p-0 px-[10px] py-[20px] bg-[#EEEEEE] h-screen flex flex-row gap-[20px] items-center justify-center'>
 
-    <div className='md:w-[400px] md:h-[550px] w-auto h-auto md:p-0 p-[10px] flex justify-center bg-[#213555] flex-col items-center gap-[10px] rounded-[10px]'>
+    <div className='md:w-[400px] md:h-[550px] w-auto h-auto md:p-0 p-[10px] flex justify-center bg-[#727D73] flex-col items-center gap-[10px] rounded-[10px]'>
       <h1 className='md:text-4xl text-3xl font-bold text-[#EEEEEE]'>Sign Up Here !!! </h1>
       <div className='flex flex-col w-full  h-[400px] p-4'>
 
@@ -157,7 +157,7 @@ export const SignUp = () => {
         </div>
         {formik.errors.confirmpassword ? <div>{formik.errors.confirmpassword}</div> : null}
 
-        <button  className="font-medium  md:text-lg  text-md items-center bg-black hover:bg-[#3E5879] text-[#e5e3df] text-white px-8  py-1 rounded-lg" type="submit">Sign Up</button>
+        <button  className="font-medium  md:text-lg  text-md items-center bg-black hover:bg-[#AAB99A] text-[#e5e3df] text-white px-8  py-1 rounded-lg" type="submit">Sign Up</button>
         <Toaster />
         <a href="/Login" className='text-[#EEEEEE]'>Login?</a>
         </form>

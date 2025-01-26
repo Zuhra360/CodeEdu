@@ -36,20 +36,23 @@ export const UserProfile = () => {
  
  
   return (
-    <div className='w-11/12 p-[10px] h-full rounded-[10px] flex items-center justify-center '>
+    <div className='w-11/12 p-[10px] h-screen rounded-[10px] flex items-center justify-center '>
        
-       <div className='md:w-[500px] md:h-[500px] w-auto h-auto md:p-0 p-[20px] bg-[#EEEEEE] flex items-center justify-center flex-col gap-[30px] rounded-[10px]'>
-       <CgProfile className='w-[100px] h-[100px] text-[#213555]'/>
+       <div className='md:w-[500px] md:h-[500px] w-auto h-auto md:p-0 p-[20px] bg-[#EEEEEE] flex items-center justify-center flex-col gap-[30px] rounded-[1px]'>
+       <CgProfile className='w-[100px] h-[100px] text-[#727D73]'/>
             <div className='w-full h-auto flex items-center justify-center flex-row gap-[10px]'>
                
-                <div className='md:w-1/2 w-auto h-auto flex flex-col  gap-[5px]'>
-                    <h1 className='w-auto md:text-4xl md:leading-[19px] text-2xl leading-[14px]  text-[#3E5879] uppercase'> <label>{user.name} </label></h1>
-                    <h1 className='w-auto  md:text-xl md:leading-[19px]  text-xl leading-[14px] text-[#3E5879] '><label> {user.email} </label></h1>
-                    {/* <h1 className='w-auto text-xl leding-[19px] text-[#3E5879]  '>Progress :<label>50%</label></h1>     */}
+                <div className='md:w-2/3 w-auto h-auto flex flex-col  gap-[10px]'>
+                    <h1 className='w-auto   text-[#727D73]  flex flex-col gap-[5px]'><label className="text-md ">UserName </label> <label className="text-lg uppercase bg-white">{user.name} </label></h1>
+                    <h1 className='w-auto   text-[#727D73]  flex flex-col gap-[5px]'><label className="text-md ">Email </label> <label className="text-lg  bg-white">{user.email} </label></h1>
+                    <h1 className='w-auto   text-[#727D73]  flex flex-col gap-[5px]'><label className="text-md ">Phone </label> <input className="text-lg  bg-white"/></h1>
+                    <h1 className='w-auto   text-[#727D73]  flex flex-col gap-[5px]'><label className="text-md ">Date of Birth </label> <input className="text-lg  bg-white"/></h1>
+                    
                 </div>
             </div>
-            <div className='w-full h-auto flex items-center justify-center '>
-            <button onClick={handleGoback}  className="w-[80px] h-[30px] py-[1px] px-[10px] bg-[#213555] hover:bg-[#3E5879] text-lg leding-[19px] text-white rounded-[10px] ">Close</button>
+            <div className='w-full h-auto flex flex-row gap-[20px] items-center justify-center '>
+                <button onClick={handleGoback}  className="w-[80px] h-[30px] py-[1px] px-[10px] bg-[#638C6D] hover:bg-[#AAB99A]  text-lg leading-[19px] text-white rounded-[3px] ">Close</button>
+                <button  className="w-[80px] h-[30px] py-[1px] px-[10px] bg-[#638C6D] hover:bg-[#AAB99A]  text-lg leading-[19px] text-white rounded-[3px] ">Save</button>
             </div>
       </div>
     

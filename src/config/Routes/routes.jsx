@@ -13,6 +13,8 @@ import { PracticePage } from "../../pages/user/PracticePage";
 import { ProfilePage } from "../../pages/user/ProfilePage";
 import { CurrentUsers } from "../../components/Admin/Dashboard/CurrentUsers";
 import { UserDetails } from "../../components/Admin/Dashboard/UserDetails";
+import { Noteview } from "../../components/User/Noteview";
+import { ViewNotes } from "../../pages/user/ViewNotes";
 
 
 export const router = createBrowserRouter([
@@ -79,6 +81,10 @@ export const router = createBrowserRouter([
   {
     path : "ProfilePage",
     element : <ProfilePage/>,
+  },
+  {
+    path : "ViewNotes",
+    element : <ViewNotes/>,
   },
   
  
